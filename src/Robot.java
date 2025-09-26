@@ -1,4 +1,8 @@
 public class Robot {
+    String name;
+    String batteryLevel;
+    String distancetoPark;
+    String botType;
     // gi robotten 4 attributter: name, batteryLevel, distancetoPark og botType
 
 
