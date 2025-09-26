@@ -9,7 +9,13 @@ public class World {
 
     public boolean isSunday() {
         // Endre metoden slik at den returner true hvis det er søndag (hint: Modulo %)
-        return false;
+        return day % 7 == 0;
+    }
+    public String toString() {
+        String[] days ={"Mandag", "Tirsdag", "Onsdag", "Torsdasg", "Fredag", "Lørdag", "Søndag" };
+        String dayName = days [(day - 1) % 7]; //Velger å bruke -1 siden det skal være mandag.
+        String weather = isRaining ? "det regner" : "det er opphold";
+        return  "Dag " + day + " (" + dayName + ") " + weather  + ".";
     }
 
     public boolean getIsRaining() {return this.isRaining;}
