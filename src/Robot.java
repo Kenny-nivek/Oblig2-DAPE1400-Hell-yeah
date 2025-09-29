@@ -1,3 +1,6 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
 public class Robot {
     private String name;
     private int batteryLevel;
@@ -75,4 +78,26 @@ public class Robot {
        // bottypen må være av type B-Bot (hint .equals)
        // En bot trenger minimum 50% batterikapasitet for å være med
        // Det kan ikke være mandag. Da er danseklubben stengt.
+    import java.time.DayOfWeek;
+    import java.time.LocalDate;
+
+    public class Robot {
+        String name;
+        int batteryLevel;
+        String disctancetoPark;
+        String botType;
+
+        public boolean canDanceAtClub(){
+            if (!botType.equals("Optimus") ) {
+                return false;
+            }
+            if (batteryLevel < 50) {
+                return false;
+            }
+            DayOfWeek today = LocalDate.now().getDayOfWeek();
+            if (today == DayOfWeek.MONDAY) {
+                return false;
+            }
+            return false;
+    }
 }
