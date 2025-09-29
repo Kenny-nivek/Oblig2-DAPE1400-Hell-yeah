@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class Robot {
     private String name;
     private int batteryLevel;
@@ -56,27 +54,19 @@ public class Robot {
 
     public boolean canWalkToThePark(World world) {
         // Metode for å sjekke om roboten kan gå til parken basert på omgivelsene
-        System.out.println(name + " sjekker om det er mulig å gå til parken.");
+
         // System.out.println(navn + " sjekker om det er mulig å gå til parken...");
 
         // Sjekk om det regner
         if (world.getIsRaining()) {
-            System.out.println(name + "er ikke så glad i å bli våt, kanskje ta en tur en annen dag.");
             // skriv ut hvorfor boten ikke kan gå i parken med System.out.println
             return false;
         }
 
-        if (world.isSunday()) {
-            System.out.println("Det er søndag, en perfekt dag for å gå tur. Lurer på om jeg har nok batteri?");
-            // Sjekk om det er søndag. Kan bare gå i parken på søndager.
-        }
-        else {
-            System.out.println("Søndag er parkdag, jeg går bare i parken på søndager.");
-        }
+        // Sjekk om det er søndag. Kan bare gå i parken på søndager.
 
-        if (batteryLevel * 100>= distancetoPark)
         // Sjekk batterinivå. En bot trenger 1% batterinivå per 100 meter for å gå til parken.
-            System.out.println("Ser ut som jeg har nok batteri også, ser ut som jeg får en fin gåtur i parken!");
+
         return true;
     }
 
