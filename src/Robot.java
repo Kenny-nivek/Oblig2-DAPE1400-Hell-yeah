@@ -73,6 +73,7 @@ public class Robot {
         }
         else {
             System.out.println("Søndag er parkdag, jeg går bare i parken på søndager.");
+            return false;
         }
 
         if (batteryLevel * 100>= distancetoPark)
