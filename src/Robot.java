@@ -88,7 +88,7 @@ public class Robot {
         String botType;
 
         public boolean canDanceAtClub(){
-            if (!botType.equals("Optimus") ) {
+            if (!botType.equals("B-Bot") ) {
                 return false;
             }
             if (batteryLevel < 50) {
