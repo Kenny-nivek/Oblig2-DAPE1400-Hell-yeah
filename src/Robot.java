@@ -50,8 +50,8 @@ public class Robot {
         // Endre metoden slik at den retunerer en tekst streng som forklarer statusen til roboten
         // eksempel: Dette er bot Dancatron 4000 av type B-Bot.
         // Denne enheten har 80.0 batterikapasitet igjen og bor 1500 meter fra parken.
-        return "Dette er en bot" + name + "av typen" + botType + "." + "Denne enhteten har" + batteryLevel +
-                "batterikapasitet igjen" + "og bor" + distancetoPark + "meter fra parken";
+        return "Dette er en " + name + "bot " + "av typen " + botType + "." + " Denne enheten har " + batteryLevel +
+                "% batterikapasitet igjen" + " og bor " + distancetoPark + " meter fra parken.";
     }
 
 
@@ -84,9 +84,9 @@ public class Robot {
 
 
     // lag en metode som heter canDanceAtClub, som sjekker om boten kan være med på danseklubben
-       // bottypen må være av type B-Bot (hint .equals)
-       // En bot trenger minimum 50% batterikapasitet for å være med
-       // Det kan ikke være mandag. Da er danseklubben stengt.
+    // bottypen må være av type B-Bot (hint .equals)
+    // En bot trenger minimum 50% batterikapasitet for å være med
+    // Det kan ikke være mandag. Da er danseklubben stengt.
 
     public boolean canDanceAtClub() {
         if (botType.equals("B-Bot")) {
