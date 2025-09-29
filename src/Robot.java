@@ -78,6 +78,14 @@ public class Robot {
        // bottypen må være av type B-Bot (hint .equals)
        // En bot trenger minimum 50% batterikapasitet for å være med
        // Det kan ikke være mandag. Da er danseklubben stengt.
+    import java.time.DayOfWeek;
+    import java.time.LocalDate;
+
+    public class Robot {
+        String name;
+        int batteryLevel;
+        String disctancetoPark;
+        String botType;
 
         public boolean canDanceAtClub(){
             if (!botType.equals("B-Bot") ) {
