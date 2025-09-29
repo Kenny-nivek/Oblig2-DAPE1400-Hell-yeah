@@ -89,23 +89,17 @@ public class Robot {
     import java.time.DayOfWeek;
     import java.time.LocalDate;
 
-    public class Robot {
-        String name;
-        int batteryLevel;
-        String disctancetoPark;
-        String botType;
-
-        public boolean canDanceAtClub(){
-            if (!botType.equals("B-Bot") ) {
+    public boolean canDanceAtClub(){
+        if (!botType.equals("B-Bot") ) {
                 return false;
-            }
-            if (batteryLevel < 50) {
-                return false;
-            }
-            DayOfWeek today = LocalDate.now().getDayOfWeek();
-            if (today == DayOfWeek.MONDAY) {
-                return false;
-            }
+        }
+        if (batteryLevel < 50) {
             return false;
+        }
+        DayOfWeek today = LocalDate.now().getDayOfWeek();
+        if (today == DayOfWeek.MONDAY) {
+            return false;
+        }
+        return false;
     }
 }
