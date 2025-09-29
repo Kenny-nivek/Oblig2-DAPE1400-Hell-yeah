@@ -1,18 +1,56 @@
 public class Robot {
-    String name;
-    String batteryLevel;
-    String distancetoPark;
-    String botType;
-    // gi robotten 4 attributter: name, batteryLevel, distancetoPark og botType
+    private String name;
+    private int batteryLevel;
+    private double distancetoPark;
+    private String botType;
 
+    public Robot(String name, int batteryLevel, double distancetoPark, String botType){
+        this.name = name;
+        this.batteryLevel = batteryLevel;
+        this.distancetoPark = distancetoPark;
+        this.botType = botType;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getBatteryLevel() {
+        return batteryLevel;
+    }
+
+    public void setBatteryLevel(int batteryLevel) {
+        this.batteryLevel = batteryLevel;
+    }
+
+    public double getDistanceToPark() {
+        return distancetoPark;
+    }
+
+    public void setDistanceToPark(double distanceToPark) {
+        this.distancetoPark = distanceToPark;
+    }
+
+    public String getBotType() {
+        return botType;
+    }
+
+    public void setBotType(String botType) {
+        this.botType = botType;
+    }
 
     public String reportStatus() {
         // Metode for å rapportere statusen til robotten
-        
-        // Endre metoden slik at den returnerer en tekst streng som forklarer statusen til roboten
+
+        // Endre metoden slik at den retunerer en tekst streng som forklarer statusen til roboten
         // eksempel: Dette er bot Dancatron 4000 av type B-Bot.
         // Denne enheten har 80.0 batterikapasitet igjen og bor 1500 meter fra parken.
-        return "";}
+        return "Dette er en bot" + name + "av typen" + botType + "." + "Denne enhteten har" + batteryLevel +
+                "batterikapasitet igjen" + "og bor" + distancetoPark + "meter fra parken";
+    }
+
 
     public boolean canWalkToThePark(World world) {
         // Metode for å sjekke om roboten kan gå til parken basert på omgivelsene
