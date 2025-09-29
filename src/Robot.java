@@ -88,17 +88,21 @@ public class Robot {
        // En bot trenger minimum 50% batterikapasitet for å være med
        // Det kan ikke være mandag. Da er danseklubben stengt.
 
-    public boolean canDanceAtClub(){
-        if (!botType.equals("B-Bot") ) {
-                return false;
+    public boolean canDanceAtClub() {
+        if (botType.equals("B-Bot")) {
+            System.out.println("Jeg er en dansebot!");
+            return true;
         }
-        if (batteryLevel < 50) {
-            return false;
+        if (batteryLevel > 50) {
+            System.out.println("Jeg har nok batteri, wohoo!");
+            return true;
         }
         DayOfWeek today = LocalDate.now().getDayOfWeek();
         if (today == DayOfWeek.MONDAY) {
+            System.out.println("Og det er ikke mandag, klubben er åpen, la oss gå og danse!");
             return false;
         }
-        return false;
+        return true;
     }
 }
+
