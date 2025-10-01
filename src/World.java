@@ -11,8 +11,16 @@ public class World {
         // Endre metoden slik at den returner true hvis det er søndag (hint: Modulo %)
         return day % 7 == 0;
     }
+
+    public boolean isMonday() {
+        return day % 8== 0;
+
+    }
+
+
+
     public String toString() {
-        String[] days ={"Mandag", "Tirsdag", "Onsdag", "Torsdasg", "Fredag", "Lørdag", "Søndag" };
+        String[] days ={"Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag" };
         String dayName = days [(day - 1) % 7]; //Velger å bruke -1 siden det skal være mandag.
         String weather = isRaining ? "det regner" : "det er opphold";
         return  "Dag " + day + " (" + dayName + ") " + weather  + ".";
