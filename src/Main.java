@@ -5,7 +5,7 @@ public class Main {
         // Oppretter en Verden-objekt (omgivelsene)
         World todaysWorld = new World(122, false);
         // Robot objekter
-        Robot r1 = new Robot("Optimus", 80, 1500, "B-bot");
+        Robot r1 = new Robot("Optimus", 80, 1500, "B-Bot");
         Robot r2 = new Robot("Megatron", 50, 500, "Toaster");
        //Status
         System.out.println(r1.reportStatus());
@@ -22,8 +22,8 @@ public class Main {
 
         // Sjekk om robotene kan gå til danseklubben
 
-        System.out.println("Kan " + r1.getName() + " danse? " + r1.canDanceAtClub());
-        System.out.println("Kan " + r2.getName() + " danse? " + r2.canDanceAtClub());
+        System.out.println("Kan " + r1.getName() + " danse? " + r1.canDanceAtClub(todaysWorld));
+        System.out.println("Kan " + r2.getName() + " danse? " + r2.canDanceAtClub(todaysWorld));
 
         // Sjekk om robotene kan gå til parken
         System.out.println("Kan " + r1.getName() + " gå til parken? " + r1.canWalkToThePark(todaysWorld));
